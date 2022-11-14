@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
 
 export default function ButtonAppBar(props) {
     return (
@@ -24,7 +25,7 @@ export default function ButtonAppBar(props) {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         {props.className}
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Link to="/login"><Button color="inherit">Login</Button></Link>
                 </Toolbar>
             </AppBar>
         </Box>
