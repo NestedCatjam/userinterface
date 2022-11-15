@@ -7,6 +7,7 @@ import ButtonAppBar from "./Components/AppBar";
 import { Route, Routes } from 'react-router-dom';
 import SignIn from './SignIn';
 import Users from './Users';
+import Evidence from './Evidence';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/login" element={<SignIn />} />
               <Route path="/" element={<></>} />
               <Route path="/users" element={<Users />} />
+              <Route path="/evidence" element={<Evidence />} />
             </Routes>
           </main>
         {/* </header> */}
