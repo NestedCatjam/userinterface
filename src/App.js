@@ -6,33 +6,36 @@ import MediaCard from './Components/Card';
 import ButtonAppBar from "./Components/AppBar";
 import { Route, Routes } from 'react-router-dom';
 import SignIn from './SignIn';
+import Users from './Users';
 
 function App() {
   return (
       <div className="App">
         <header className="App-header">
-          <ButtonAppBar className="Controlcognizant"></ButtonAppBar>
+          <ButtonAppBar className="Controlcognizant" />
         </header>
-        <main>
-          {/* <Mui.Grid container spacing={3} paddingLeft={25}>
-            <Mui.Grid item xs={12} sm={6} md={4}>
-              <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
-            </Mui.Grid>
-            <Mui.Grid item xs={12} sm={6} md={4}>
-              <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
-            </Mui.Grid>
-            <Mui.Grid item xs={12} sm={6} md={4}>
-              <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
-            </Mui.Grid>
-            <Mui.Grid item xs={12} sm={6} md={4}>
-              <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
-            </Mui.Grid>
-          </Mui.Grid> */}
-          <Routes>
-            <Route path="/login" element={<SignIn />} />
-            <Route path="/" element={<></>} />
-          </Routes>
-        </main>
+          <main>
+            {/* <Mui.Grid container spacing={3} paddingLeft={25}>
+              <Mui.Grid item xs={12} sm={6} md={4}>
+                <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
+              </Mui.Grid>
+              <Mui.Grid item xs={12} sm={6} md={4}>
+                <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
+              </Mui.Grid>
+              <Mui.Grid item xs={12} sm={6} md={4}>
+                <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
+              </Mui.Grid>
+              <Mui.Grid item xs={12} sm={6} md={4}>
+                <MediaCard className="" src={require('./Imgs/download.png')} description=""/>
+              </Mui.Grid>
+            </Mui.Grid> */}
+            <Routes>
+              <Route path="/login" element={<SignIn />} />
+              <Route path="/" element={<></>} />
+              <Route path="/users" element={<Users />} />
+            </Routes>
+          </main>
+        {/* </header> */}
         
       </div>
   );
