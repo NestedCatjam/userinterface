@@ -1,12 +1,21 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import {DataGrid} from '@mui/x-data-grid';
+import { Button } from '@mui/material';
 
 
 const columns = [
     {field: "name", headerName: "Name", width: 150},
     {field: "email", headerName: "Email", width: 150},
-    {field: "role", headerName: "Role", width: 150}
+    {field: "role", headerName: "Role", width: 150},
+    {field: "action", headerName: "Action", width: 150, renderCell: () => {
+        return (
+            <>
+                <Button>View</Button>
+                <Button>Delete</Button>
+            </>
+        )
+    }}
 ];
 
 const rows = [
@@ -17,7 +26,7 @@ const rows = [
 export default function Users() {
     
     return (
-         <Box sx={{width: "100%", height: 500}}>
+         <Box sx={{width: "100%", height: 600}}>
             <DataGrid 
                  columns={columns}
                  rows={rows}
