@@ -54,7 +54,7 @@ export default function ButtonAppBar(props) {
                 </IconButton>
                 <Divider />
                 <List>
-                    {[['users', <People />], ['evidence', <Icons.FilePresent />]].map(([item, icon]) => (
+                    {[['admin', <People />], ['evidence', <Icons.FilePresent />]].map(([item, icon]) => (
                         <ListItem key={item} disablePadding>
                             <ListItemButton component={Link} to={'/' + item}>
                                 <ListItemIcon>
