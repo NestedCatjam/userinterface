@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import { CssBaseline, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { ChevronLeft, People } from '@mui/icons-material';
 import * as Icons from '@mui/icons-material';
 
@@ -15,7 +15,8 @@ export default function ButtonAppBar(props) {
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
     return (
         <Box sx={{ flexGrow: 1, display: 'flex' }}>
-            <AppBar position="fixed" width={"100%"}>
+            <CssBaseline />
+            <AppBar position="sticky" width={"100%"} component="nav">
                 <Toolbar>
                     <IconButton
                         size="large"
@@ -44,25 +45,26 @@ export default function ButtonAppBar(props) {
                 }}
                 variant="persistent"
                 anchor="left"
+                component="nav"
                 open={sidebarOpen}
             >
-                
-                    <IconButton onClick={() => setSidebarOpen(false)}>
-                        <ChevronLeft />
-                    </IconButton>
-                    <Divider />
-                    <List>
-                        {[['users', <People />], ['evidence', <Icons.FilePresent />]].map(([item, icon]) => (
-                            <ListItem key={item} disablePadding>
-                                <ListItemButton component={Link} to={'/' + item}>
-                                    <ListItemIcon>
-                                        {icon}
-                                    </ListItemIcon>
-                                    <ListItemText primary={item} />
-                                </ListItemButton>
-                            </ListItem>
-                        ))}
-                    </List>
+
+                <IconButton onClick={() => setSidebarOpen(false)}>
+                    <ChevronLeft />
+                </IconButton>
+                <Divider />
+                <List>
+                    {[['users', <People />], ['evidence', <Icons.FilePresent />]].map(([item, icon]) => (
+                        <ListItem key={item} disablePadding>
+                            <ListItemButton component={Link} to={'/' + item}>
+                                <ListItemIcon>
+                                    {icon}
+                                </ListItemIcon>
+                                <ListItemText primary={item} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
             </Drawer>
         </Box>
     );
