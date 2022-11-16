@@ -9,6 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import { ChevronLeft, People } from '@mui/icons-material';
+import * as Icons from '@mui/icons-material';
 
 export default function ButtonAppBar(props) {
     const [sidebarOpen, setSidebarOpen] = React.useState(false);
@@ -51,11 +52,11 @@ export default function ButtonAppBar(props) {
                     </IconButton>
                     <Divider />
                     <List>
-                        {['users', 'evidence'].map(item => (
+                        {[['users', <People />], ['evidence', <Icons.FilePresent />]].map(([item, icon]) => (
                             <ListItem key={item} disablePadding>
                                 <ListItemButton component={Link} to={'/' + item}>
                                     <ListItemIcon>
-                                        <People />
+                                        {icon}
                                     </ListItemIcon>
                                     <ListItemText primary={item} />
                                 </ListItemButton>
