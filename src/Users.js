@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import { DataGrid } from '@mui/x-data-grid';
 import { Button, Typography } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 const columns = [
@@ -33,7 +34,7 @@ export default function Users() {
     return (
         <>
             <Typography variant="h1" component="h1">Users</Typography>
-            <Button>Add new user</Button>
+            <Button component={Link} to="/admin/new-user">Add new user</Button>
             <Box sx={{ width: "100%", height: 800 }}>
                 <DataGrid
                     columns={columns}

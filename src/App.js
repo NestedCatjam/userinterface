@@ -8,6 +8,7 @@ import { Route, Routes } from 'react-router-dom';
 import SignIn from './SignIn';
 import Users from './Users';
 import Evidence from './Evidence';
+import SignUp from './SignUp';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
               <Route path="/" element={<></>} />
               <Route path="/admin" element={<Users />} />
               <Route path="/evidence" element={<Evidence />} />
+              <Route path="/admin/new-user" element={<SignUp />}/>
             </Routes>
           </main>
         {/* </header> */}
