@@ -45,7 +45,7 @@ export default function SignUp() {
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             }
-        })
+        }).then(response => response.ok ? (() => {})() : alert("Connection error"));
 
     };
 
