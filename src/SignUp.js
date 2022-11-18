@@ -40,7 +40,7 @@ export default function SignUp() {
             body: JSON.stringify({
                 id: null,
                 name: data.get('firstName') + " " + data.get('lastName'),
-                email: data.get('email')
+                email: data.get('email'), posts: []
             }),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
