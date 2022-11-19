@@ -9,7 +9,31 @@ const backend = "";
 
 
 export default function Controls() {
-  
+
+  const [rows, setRows] = React.useState([]);
+
+  const handleDelete = row => {
+    
+    fetch(`${backend}/control/${row.id}`, {method: 'DELETE'}
+    ).then(response => {
+      response.ok ? setRows(rows.filter(control => control.id !== row.id)) : 
+        alert("Error in deletion");
+  })
+
+    console.log("deleted:", row)
+    alert("row deleted:", row)
+  }
+
+  const handleGet = id => {
+    fetch(`${backend}/control/get/${id}`)
+    .then(res => {
+      return res.json();
+    })
+    .then(data => {
+      console.log("data returned:", data)
+    })
+  }
+   
   const columns = [
     { field: "id", headerName: "Control ID", width: 150 },
     { field: "name", headerName: "Name", width: 150 },
@@ -18,35 +42,25 @@ export default function Controls() {
     { field: "subtype", headerName: "Subtype", width: 150 },
     { field: "mapping", headerName: "Mapping", width: 150 },
     {
-      field: "action", headerName: "Action", width: 300, renderCell: () => {
+      field: "action", headerName: "Action", width: 300, renderCell: (params) => {
         return (
           <>
                         <Button>View</Button>
                         <Button>Change</Button>
-                        <Button onClick={() => {console.log("deleted")}}>Delete</Button>
-                        <Button onClick={() => {handleDelete}}>Delete</Button>
+                        <Button onClick={item => handleDelete(params.row)}>Delete</Button>
                     </>
                 )
               }
             }
           ];
           
-          const [rows, setRows] = React.useState([]);
-          React.useEffect(() => {
-            fetch(`${backend}/controls`, { method: 'GET' }).then(raw => raw.json()).then(rows => {
-              console.log("row ID:" , rows.id)
-              console.log(rows)
-              setRows(rows);
-            });
-          }, [])
-          
-          const handleDelete = () => {
-            // fetch('http://localhost:8080/control', {
-            //     method: 'DELETE'
-            //   })
-            console.log()
-            console.log("delete logged")
-            }
+    React.useEffect(() => {
+      fetch(`${backend}/controls`, { method: 'GET' }).then(raw => raw.json()).then(rows => {
+        console.log("row ID:" , rows.id)
+        console.log(rows)
+        setRows(rows);
+      });
+    }, [])
 
     return (
         <>
