@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="124px" preserveAspectRatio="none" style="width:581px;height:124px;" version="1.1" viewBox="0 0 581 124" width="581px" zoomAndPan="magnify"><defs/><g><ellipse cx="349.9706" cy="46.3774" fill="#F8F8F8" rx="19.9706" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="337.9706" y="49.8618">App</text><ellipse cx="52.8406" cy="46.3774" fill="#F8F8F8" rx="46.8406" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="62" x="21.8406" y="49.8618">App.test</text><ellipse cx="156.8198" cy="100.8774" fill="#F8F8F8" rx="34.8198" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="45" x="134.3198" y="104.3618">AppBar</text><ellipse cx="229.2132" cy="100.8774" fill="#F8F8F8" rx="24.2132" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="214.2132" y="104.3618">Card</text><ellipse cx="307.8909" cy="100.8774" fill="#F8F8F8" rx="41.8909" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="55" x="280.3909" y="104.3618">Evidence</text><ellipse cx="144.0772" cy="46.3774" fill="#F8F8F8" rx="30.5772" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="39" x="124.5772" y="49.8618">index</text><ellipse cx="251.8986" cy="46.2797" fill="#F8F8F8" rx="64.3986" ry="15.2797" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="101" x="201.3986" y="49.7641">reportWebVitals</text><ellipse cx="441.1218" cy="46.4244" fill="#F8F8F8" rx="57.6218" ry="13.9244" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="84" x="399.1218" y="49.9087">setupTests</text><ellipse cx="391.9558" cy="100.8774" fill="#F8F8F8" rx="28.4558" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="373.9558" y="104.3618">SignIn</text><ellipse cx="466.9056" cy="100.8774" fill="#F8F8F8" rx="33.4056" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="43" x="445.4056" y="104.3618">SignUp</text><ellipse cx="541.9558" cy="100.8774" fill="#F8F8F8" rx="28.4558" ry="12.8774" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="36" x="523.9558" y="104.3618">Users</text><!--MD5=[ba235cd4b572c4d8ea46fe6884950de2]
+link App to AppBar--><path d="M336.061,55.9649 C331.964,58.1808 327.399,60.3955 323,62 C270.1,81.2957 253.662,74.4788 199,88 C195.457,88.8763 191.762,89.8473 188.097,90.8462 " fill="none" id="App-&gt;AppBar" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="183.136,92.2196,192.8766,93.6756,187.9551,90.8867,190.744,85.9651,183.136,92.2196" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[88cfcdd5e5e15533e722915bee3db862]
+link App to Card--><path d="M335.575,55.6201 C331.549,57.7833 327.143,60.0572 323,62 C310.13,68.0355 276.084,81.5809 252.704,90.7578 " fill="none" id="App-&gt;Card" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="247.889,92.6454,257.728,93.0858,252.5443,90.8211,254.8091,85.6373,247.889,92.6454" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[79db124ed233aa7d08c6c0a7151448b1]
+link App to Evidence--><path d="M341.298,58.378 C335.351,65.8115 327.373,75.7843 320.716,84.1044 " fill="none" id="App-&gt;Evidence" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="317.57,88.0377,326.3157,83.5087,320.6935,84.1334,320.0688,78.5111,317.57,88.0377" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[4cc566e36512775c96704077d4c9153c]
+link App to SignIn--><path d="M358.702,58.378 C364.732,65.9148 372.849,76.0618 379.56,84.4501 " fill="none" id="App-&gt;SignIn" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="382.726,88.4076,380.2272,78.881,379.6025,84.5033,373.9803,83.8786,382.726,88.4076" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[5477172cd5c55c6573b4484f0f189e59]
+link App to SignUp--><path d="M364.445,55.5781 C368.471,57.7412 372.872,60.0255 377,62 C397.698,71.901 421.654,81.9494 439.643,89.2244 " fill="none" id="App-&gt;SignUp" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="444.552,91.2004,437.6968,84.1289,439.9137,89.3333,434.7094,91.5502,444.552,91.2004" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[43d6f01182acdf8bacd157bdce85f915]
+link App to Users--><path d="M363.929,55.9913 C368.027,58.2076 372.594,60.416 377,62 C432.448,81.9337 450.117,72.6334 507,88 C509.791,88.7539 512.682,89.6135 515.551,90.5184 " fill="none" id="App-&gt;Users" style="stroke: #000000; stroke-width: 0.5;"/><polygon fill="#000000" points="520.668,92.1831,513.3474,85.5945,515.9134,90.6359,510.872,93.2019,520.668,92.1831" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[ade7508b8fd28882668ed72a2a00701f]
+link <b>App.test</b> to App--><path d="M72.643,34.5356 C84.1084,28.2589 99.1104,21.2196 113.5,18 C157.523,8.15 274.162,2.427 316.5,18 C324.07,20.7843 331.096,26.1227 336.738,31.4337 " fill="none" id="&lt;b&gt;App.test&lt;/b&gt;-&gt;App" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="340.413,35.0744,336.8339,25.8989,336.8607,31.5557,331.2039,31.5826,340.413,35.0744" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[893f7b7637e22df589de0e5c7f34855e]
+link <b>index</b> to App--><path d="M157.444,34.7285 C165.551,28.4297 176.426,21.3047 187.5,18 C214.97,9.803 289.596,8.104 316.5,18 C324.07,20.7843 331.096,26.1227 336.738,31.4337 " fill="none" id="&lt;b&gt;index&lt;/b&gt;-&gt;App" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="340.413,35.0744,336.8339,25.8989,336.8607,31.5557,331.2039,31.5826,340.413,35.0744" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[318060c9d36180d01866d95e8e3ffd8f]
+link <b>index</b> to reportWebVitals--><path d="M174.797,46.5 C177.304,46.5 179.811,46.5 182.317,46.5 " fill="none" id="&lt;b&gt;index&lt;/b&gt;-&gt;reportWebVitals" style="stroke: #000000; stroke-width: 1.0;"/><polygon fill="#000000" points="187.463,46.5,178.463,42.5,182.463,46.5,178.463,50.5,187.463,46.5" style="stroke: #000000; stroke-width: 1.0;"/><script type="text/plantuml"><![CDATA[MD5=[15a70f30c215ed11b5d71fd2adefab43]
+@startuml
+
+scale max 1920 width
+top to bottom direction
+
+skinparam nodesep 13
+skinparam ranksep 26
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+(App)
+(<b>App.test</b>)
+(AppBar)
+(Card)
+(Evidence)
+(<b>index</b>)
+(reportWebVitals)
+(<b>setupTests</b>)
+(SignIn)
+(SignUp)
+(Users)
+
+
+(App) --> (AppBar)
+(App) --> (Card)
+(App) --> (Evidence)
+(App) --> (SignIn)
+(App) --> (SignUp)
+(App) --> (Users)
+(<b>App.test</b>) -[thickness=1]> (App)
+(<b>index</b>) -[thickness=1]> (App)
+(<b>index</b>) -[thickness=1]> (reportWebVitals)
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>
