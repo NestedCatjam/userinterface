@@ -25,7 +25,7 @@ export default function Users() {
             field: "action", headerName: "Action", width: 300, renderCell: (params) => {
                 return (
                     <>
-                        <Button>View</Button>
+                        <Button component={Link} to={`/posts/${params.row.id}`}>Posts</Button>
                         <Button>Change role</Button>
                         
                         <Button onClick={item => deleted(params.row)}>Delete</Button>
