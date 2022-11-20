@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { DataGrid } from "@mui/x-data-grid";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const Posts = () => {
@@ -10,6 +10,19 @@ const Posts = () => {
     const [userName, setUserName] = useState(null);
 
     const [rows, setRows] = useState([]);
+    const handleNewPost = useCallback(() => {
+        const content = prompt("Enter post content");
+        fetch(`/users/${userId}/posts`, {
+            method: 'POST', 
+            body: JSON.stringify({
+                id: null,
+                content
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            }
+        }).then(response => response.ok ? (() => {})() : alert("Connection error"));
+    });
     useEffect(() => {
         fetch(`/users/${userId}/posts`, { method: 'GET' }).then(raw => raw.json()).then(rows => {
             console.log(rows);
@@ -19,13 +32,13 @@ const Posts = () => {
     useEffect(() => { fetch(`/users/${userId}`, { method: 'GET' }).then(raw => raw.json()).then(row => setUserName(row.name)); })
 
     const columns = [
-        { name: "content" }
+        { field: "content" }
     ];
 
     return (
         <>
             <Typography variant="h1" component="h1">{userName}'s posts</Typography>
-            <Button component={Link}>New post</Button>
+            <Button onClick={handleNewPost}>New post</Button>
             <Box sx={{ width: "100%", height: 800 }}>
                 <DataGrid
                     columns={columns}
