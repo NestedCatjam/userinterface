@@ -9,21 +9,22 @@ const backend = "";
 
 export default function Controls() {
 
-  const initialPostValues = ["Control_Name", "control_type", "control_subtype", "control_description"];
-
+  const initialPostValues = {"name": "", "type": "", "subtype": "", "description": ""};
+  
   const [rows, setRows] = React.useState([]);
   const [openModal, setOpenModal] = React.useState(false);
-  const [postValues, setPostValue] = React.useState([]);
+  const [postValues, setPostValue] = React.useState(initialPostValues);
 
   const handleChange = i => {
-    initialPostValues.forEach((x) => {
-      if(i.target.id === x){
-        postValues[x] = i.target.value
-        setPostValue(postValues)
-      }
-    })
+    let currPostValues = postValues
 
-    console.log(postValues)
+    for(let key in currPostValues){
+      if(key == i.target.id){
+        console.log(key, i.target.id)
+        currPostValues[key] = i.target.value
+      }
+    }
+    setPostValue(currPostValues)
   }
 
   const handleDelete = row => {    
@@ -39,12 +40,14 @@ export default function Controls() {
   const handlePost = e => {
     // e.preventDefault();
 
-    const post = `${backend}/control?id=&name=${postValues["Control_Name"]}&description=${postValues["control_description"]}&type=${postValues["control_type"]}&subtype=${postValues["control_subtype"]}`
-    console.log("post:", post)
+    const post = `${backend}` + "/control"
+    // console.log("post:", postValues)
+    console.log("postValues:", postValues)
+    console.log("output:", JSON.stringify(postValues))
     fetch(post, {
-      method: 'POST'
-      // headers: {"Content-Type": "application/json" },
-      // body: JSON.stringify(post)
+      method: 'POST',
+      headers: {"Content-Type": "application/json" },
+      body: JSON.stringify(postValues)
     }).then(res => {
       console.log("res:", res)
       console.log("new post successfully added")
@@ -87,9 +90,11 @@ export default function Controls() {
           ];
           
     React.useEffect(() => {
-      fetch(`${backend}/controls`, { method: 'GET' }).then(raw => raw.json()).then(rows => {
-        console.log("row ID:" , rows.id)
-        console.log(rows)
+      console.log(`${backend}/control`)
+      fetch(`${backend}/control`, { method: 'GET' })
+      .then(raw => {
+        return raw.json()
+      }).then(rows => {
         setRows(rows);
       });
     }, [])
@@ -119,10 +124,10 @@ export default function Controls() {
                 component="form"
                 sx={{position:"absolute", width:"50%", height: "40%", marginLeft:"50%", transform:"translate(-50%, 50%)", background:"skyblue"}}>
                   <h1>New Control</h1>
-                  <TextField id="Control_Name" label="Name" onChange={i => {handleChange(i)}} required></TextField>
-                  <TextField id="control_type" label="Type" onChange={i => {handleChange(i)}} required></TextField>
-                  <TextField id="control_subtype" label="Subtype" onChange={i => {handleChange(i)}} required></TextField>
-                  <TextField id="control_description" label="Description" onChange={i => {handleChange(i)}} required></TextField>
+                  <TextField id="name" label="Name" onChange={i => {handleChange(i)}} required></TextField>
+                  <TextField id="type" label="Type" onChange={i => {handleChange(i)}} required></TextField>
+                  <TextField id="subtype" label="Subtype" onChange={i => {handleChange(i)}} required></TextField>
+                  <TextField id="description" label="Description" onChange={i => {handleChange(i)}} required></TextField>
                   
                   <Button onClick={e => handlePost(e)}>Submit</Button>
                 </Box>
