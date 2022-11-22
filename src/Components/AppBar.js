@@ -54,9 +54,9 @@ export default function ButtonAppBar(props) {
                 </IconButton>
                 <Divider />
                 <List>
-                    {[['admin', <People />], ['evidence', <Icons.FilePresent />]].map(([item, icon]) => (
+                    {[['admin', <People />], ['evidence', <Icons.FilePresent />], ['controls', <Icons.Article/>]].map(([item, icon]) => (
                         <ListItem key={item} disablePadding>
-                            <ListItemButton component={Link} to={'/' + item}>
+                            <ListItemButton component={Link} to={'/' + item} onClick={() => setSidebarOpen(false)}>
                                 <ListItemIcon>
                                     {icon}
                                 </ListItemIcon>

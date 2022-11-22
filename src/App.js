@@ -9,7 +9,11 @@ import SignIn from './SignIn';
 import Users from './Users';
 import Evidence from './Evidence';
 import SignUp from './SignUp';
+
+import Controls from './Controls';
+
 import Posts from './Posts';
+
 
 function App() {
   return (
@@ -39,6 +43,8 @@ function App() {
               <Route path="posts/:userId" element={<Posts  />}/>
               <Route path="/evidence" element={<Evidence />} />
               <Route path="/admin/new-user" element={<SignUp />}/>
+              <Route path="/controls" element={<Controls />} />
+              <Route path="*" element={<></>} />
             </Routes>
           </main>
         {/* </header> */}
