@@ -22,12 +22,12 @@ const rows = [
     {id: 2, contributor: "Bertrand Russell", framework: "HITRUST", control: "10.90.1"}
 ];
 export default function Evidence() {
-    
+
     return (
         <>
         <Typography variant="h1" component="h1">Compliance evidence uploads</Typography>
          <Box sx={{width: "100%", height: 600}}>
-            <DataGrid 
+            <DataGrid
                  columns={columns}
                  rows={rows}
                  pageSize={10}
