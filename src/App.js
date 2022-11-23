@@ -11,6 +11,7 @@ import Evidence from './Evidence';
 import SignUp from './SignUp';
 
 import Controls from './Controls';
+import Fnf from './Fnf';
 
 import Posts from './Posts';
 
@@ -44,7 +45,7 @@ function App() {
               <Route path="/evidence" element={<Evidence />} />
               <Route path="/admin/new-user" element={<SignUp />}/>
               <Route path="/controls" element={<Controls />} />
-              <Route path="*" element={<></>} />
+              <Route path="*" element={<Fnf />} />
             </Routes>
           </main>
         {/* </header> */}

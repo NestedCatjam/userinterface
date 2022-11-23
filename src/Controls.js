@@ -28,8 +28,10 @@ export default function Controls() {
   }
 
   const handleDelete = row => {    
+    console.log("row id:", row.id)
     fetch(`${backend}/control/${row.id}`, {method: 'DELETE'}
     ).then(response => {
+      console.log("response:", response)
       response.ok ? setRows(rows.filter(control => control.id !== row.id)) : 
         alert("Error in deletion");
   })
@@ -40,7 +42,7 @@ export default function Controls() {
   const handlePost = e => {
     // e.preventDefault();
 
-    const post = `${backend}` + "/control"
+    const post = `${backend}/control`
     // console.log("post:", postValues)
     console.log("postValues:", postValues)
     console.log("output:", JSON.stringify(postValues))
@@ -49,6 +51,7 @@ export default function Controls() {
       headers: {"Content-Type": "application/json" },
       body: JSON.stringify(postValues)
     }).then(res => {
+      alert("new post successfully added!")
       console.log("res:", res)
       console.log("new post successfully added")
     })
