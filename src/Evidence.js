@@ -21,17 +21,8 @@ const rows = [
     {id: 1, contributor: "Bob Smith", framework: "HITRUST", control: "10.90.1"},
     {id: 2, contributor: "Bertrand Russell", framework: "HITRUST", control: "10.90.1"}
 ];
-
-const backend = "";
-
 export default function Evidence() {
-    const [rows, setRows] = React.useState([]);
-        React.useEffect(() => {
-            fetch(`${backend}/evidence`, { method: 'GET' }).then(raw => raw.json()).then(rows => {
-                console.log(rows)
-                setRows(rows);
-            });
-        }, [])
+    
     return (
         <>
         <Typography variant="h1" component="h1">Compliance evidence uploads</Typography>
